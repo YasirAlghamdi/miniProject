@@ -33,7 +33,7 @@ public class GameController {
     }
 
     @GetMapping("/{id}")
-    ResponseEntity<GameRes> getGameById(@PathVariable Long id) {
+    ResponseEntity<GameRes> getGameById(@PathVariable int id) {
         try {
             Game game = service.getGameById(id);
             return new ResponseEntity<>(new GameRes("The game is found", game), HttpStatus.FOUND);
@@ -52,6 +52,7 @@ public class GameController {
             return new ResponseEntity<>(new GameRes( e.getMessage() ), HttpStatus.BAD_REQUEST);
         }
     }
+
     @PutMapping("/{id}")
     ResponseEntity<GameRes> updateGame(@RequestBody Game game){
         try {

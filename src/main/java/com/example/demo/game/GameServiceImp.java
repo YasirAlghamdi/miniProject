@@ -26,7 +26,7 @@ public class GameServiceImp implements GameService{
     }
 
     @Override
-    public Game getGameById(Long id) {
+    public Game getGameById(int id) {
         Optional<Game> game = repo.findById(id);
         if (game.isPresent())
             return game.get();

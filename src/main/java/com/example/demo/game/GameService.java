@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface GameService {
     public List<Game> getGames();
-    public Game getGameById(@PathVariable Long id);
+    public Game getGameById(@PathVariable int id);
     public void addGame(@RequestBody Game game) throws Exception;
     public void updateGame(@RequestBody Game game);
 }
