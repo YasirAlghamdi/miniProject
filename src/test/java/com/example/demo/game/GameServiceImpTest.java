@@ -26,9 +26,9 @@ class GameServiceImpTest {
     @InjectMocks
     private GameServiceImp service;
     final Date date = Date.valueOf("2021/10/10");
-    private Game newGame = new Game(0L, "newGame", "newDeveloper",
-            "newGenre", "newPlatform", "newMetacritic_score",
-            date, "10");
+//    private Game newGame = new Game(0L, "newGame", "newDeveloper",
+//            "newGenre", "newPlatform", 10,
+//            date, "10");
     final long gameId = 0;
 
     @BeforeEach
